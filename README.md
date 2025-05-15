@@ -1,7 +1,7 @@
 # LivePortrait for ComfyUI
 
 安装准备：
-1、下载模型（百度云链接: https://pan.baidu.com/s/1-OKeUq57JDiLQj0fxRY9NA 提取码: ncmr，或者到源项目下载），放到comfyui/models/liveportrait，目录结构如下：
+1、下载模型（百度云链接: https://pan.baidu.com/s/1-OKeUq57JDiLQj0fxRY9NA 提取码: ncmr，或者到源项目下载），放到ComfyUI/models/liveportrait，目录结构如下：
 ```
 ├── liveportrait
     ├── animals
