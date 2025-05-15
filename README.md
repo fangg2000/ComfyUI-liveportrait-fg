@@ -2,6 +2,7 @@
 
 安装准备：
 1、下面模型（百度云链接: https://pan.baidu.com/s/1-OKeUq57JDiLQj0fxRY9NA 提取码: ncmr，或者到源项目下载），放到comfyui/models/liveportrait，目录结构如下：
+```
 ├── liveportrait
     ├── animals
     │   ├── base_models
@@ -25,6 +26,8 @@
     │   ├── warping_module.pth
     │   ├── appearance_feature_extractor.pth
     │   ├── motion_extractor.pth
+
+```
 
 2、执行如下命令安装相关依赖包：
 ```
