@@ -40,9 +40,13 @@ pip install -r requirements.txt
 # gcc<=13、g++<=13
 python setup.py build install
 ```
-目录下的multiscaledeformableattention-1.0-cp311-cp311-linux_x86_64.whl文件是本人环境使用的。
+如果是linux系统，cuda12.6+python 3.11的，可以通过目录下的multiscaledeformableattention-1.0-cp311-cp311-linux_x86_64.whl安装，本人测试环境使用的。
 
 3、效果如下（工作流在workflows目录下）：
+![02](https://github.com/user-attachments/assets/47f25f36-c29d-468d-ad98-93bb31ce03ef)
 
+https://github.com/user-attachments/assets/c6acfb64-9e5d-4ac2-940d-5697d51400d4
+
+https://github.com/user-attachments/assets/772ef3dc-4bd5-4066-8ead-b32516743b28
 
 源项目地址：https://github.com/KwaiVGI/LivePortrait
