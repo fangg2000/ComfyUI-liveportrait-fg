@@ -19,6 +19,8 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 60
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 60
 sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
+
+
 方法二：通过 PPA 安装新版 GCC（Ubuntu 专用）
 如果您的 CUDA 明确需要 GCC 13，但系统仓库中没有，可通过 Ubuntu Toolchain PPA 安装：
 
@@ -33,6 +35,7 @@ sudo apt install gcc-13 g++-13
 bash
 gcc-13 --version
 
+
 关于激活或设置为默认（如果像本人一样，之前安装CUDA环境时使用的是更高的gcc版本，那么建议新建环境并同时安装gcc-13。嗯，后面我发现了，如果你的python版本是3.11的，那么通过安装项目下的.whl轮子是最快速的办法，我已经在之前的环境中成功使用）
 ```
 # 查看已注册的 GCC 版本
@@ -43,6 +46,14 @@ gcc --version
 
 # 将gcc注册到系统备用列表（后面的“60”数字相当于序号）
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 60
+
+# 切换默认 GCC 版本(前提是激活了多个备用版本，运行以下命令选择 gcc-13 作为默认编译器)：
+# 选择 gcc
+sudo update-alternatives --config gcc
+# 选择 g++
+sudo update-alternatives --config g++
+
+在交互界面中输入 gcc-13 对应的编号（例如显示为 3），按回车确认。
 
 # 新建环境时安装gcc（其实我更想通过修改现有环境的gcc版本或复制环境同时安装gcc版本，这样方便快捷，但现实往往不尽如人意）
 conda create -n new_env python=3.11 gcc=13 gxx=13 -c conda-forge -y
