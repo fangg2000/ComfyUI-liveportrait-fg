@@ -35,10 +35,13 @@ pip install -r requirements.txt
 
 # 
 ```
-注：如果需要驱动动物，则需要到ComfyUI-liveportrait-fg/liveportrait/src/utils/dependencies/XPose/models/UniPose/ops目录下执行编译命令：
+注：如果需要驱动动物，则需要到ComfyUI-liveportrait-fg/liveportrait/src/utils/dependencies/XPose/models/UniPose/ops目录下执行编译命令（这里有一点需要特别注意，gcc和g++版本需要<=13，否则编译异常）：
 ```
 # gcc<=13、g++<=13
 python setup.py build install
+
+# 安装gcc-13、g++-13请看gcc_install.txt（看需要选择）
+
 ```
 如果是linux系统，cuda12.6+python 3.11的，可以通过目录下的multiscaledeformableattention-1.0-cp311-cp311-linux_x86_64.whl安装，本人测试环境使用的。
 
